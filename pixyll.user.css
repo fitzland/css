@@ -63,19 +63,19 @@
 h1,
 .h1,
 .f1 {
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	line-height: 1.5rem;
 }
 h2,
 .h2,
 .f2 {
-	font-size: 1.3rem;
+	font-size: 1.25rem;
 	line-height: 1.5rem;
 }
 h3,
 .h3,
 .f3 {
-	font-size: 1.2rem;
+	font-size: 1.125rem;
 	line-height: 1.5rem;
 }
 p,
@@ -95,7 +95,7 @@ div[cid],
 }
 
 h4 {
-	font-size: 1.13rem;
+	font-size: 1.125rem;
 }
 /*
  Pixyll
@@ -121,7 +121,10 @@ img {
 	max-width: 100%;
 }
 body {
-	font-size: 1.5rem;
+	margin: 0;
+	color: #000;
+	background-color: #fff;
+	font-size: 1rem;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -216,8 +219,6 @@ blockquote {
 	color: #333; 
 	font-size: 20px;
 	font-style: italic;
-	orphan: 2;
-	widow: 2;
   }
 	
 blockquote > :first-child {
@@ -255,13 +256,6 @@ h6,
 }
 
 @media print {
-    /* Print CSS rules go here */
-	body {
-		margin: 0;
-		color: #000;
-		background-color: #fff;
-		font-size: 12pt;
-	}
 
 	header, footer, aside, nav, form, iframe, .menu, .hero, .adslot {
 		display: none;
