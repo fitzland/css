@@ -211,11 +211,21 @@ code,
 }
 
 blockquote {
-	padding: 1.33em;
+	border-left: 4px solid #333;
+	padding: 0 15px;
+	color: #333; 
+	font-size: 20px;
 	font-style: italic;
-	border-left: 4px solid #333333;
-	color: #333333;
-}
+	orphan: 2;
+	widow: 2;
+  }
+	
+blockquote > :first-child {
+	  margin-top: 0; }
+
+blockquote > :last-child {
+	  margin-bottom: 0; }
+
 blockquote em {
 	color: #000;
 }
@@ -243,6 +253,50 @@ h6,
 	line-height: 1.2;
 	margin: 1em 0 0.5em;
 }
+
+@media print {
+    /* Print CSS rules go here */
+	body {
+		margin: 0;
+		color: #000;
+		background-color: #fff;
+		font-size: 12pt;
+	}
+
+	header, footer, aside, nav, form, iframe, .menu, .hero, .adslot {
+		display: none;
+	}
+	
+	article {
+		column-width: 17em;
+		column-gap: 3em;
+	}
+	
+	blockquote {
+		orphan: 2;
+		widow: 2;
+	}
+
+	a[href^="http"]::after {
+		content: " (" attr(href) ")";
+	}
+
+	h1 {
+		page-break-before: always;
+		break-before: always;
+	}
+
+	table, blockquote {
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+
+	@page {
+		margin: 3cm;
+	  }
+	  
+}
+
 @media screen and (min-width: 48em) {
 	.h1,
 	h1 {
