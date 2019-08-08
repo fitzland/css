@@ -284,6 +284,7 @@ h6,
 		break-before: always;
 	}
 
+<<<<<<< HEAD
 	h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		page-break-before: auto;
 		page-break-after: avoid;
@@ -293,6 +294,16 @@ h6,
 		page-break-after: always;
 	}
 
+=======
+	hr {
+		page-break-after: always;
+	}
+	
+	ul {
+		list-style-type: square;
+	}
+	
+>>>>>>> 2f37951a3c1467527b0ebd5c3402319d69627da8
 	table, blockquote {
 		page-break-inside: avoid;
 		break-inside: avoid;
